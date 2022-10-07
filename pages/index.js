@@ -16,6 +16,9 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import checkName from '../components/authcheck/name';
+import checkEmail from '../components/authcheck/email';
+import checkPassword from '../components/authcheck/password';
 
 export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false); // for "toggle password"
@@ -40,26 +43,22 @@ export default function SignupCard() {
 
   function updateFirstName (val) {
     setFirstName(val)
-    //TODO first name check logic
-    setFirstNameValid(true) 
+    setFirstNameValid(checkName(val)) 
   }
 
   function updateLastName (val) {
     setLastName(val)
-    //TODO last name check logic
-    setLastNameValid(true)
+    setLastNameValid(checkName(val))
   }  
 
   function updateEmail (val) {
     setEmail(val)
-    //TODO email check logic
-    setEmailValid(true)
+    setEmailValid(checkEmail(val))
   }    
 
   function updatePassword (val) {
     setPassword(val)
-    //TODO password check logic
-    setPasswordValid(true)
+    setPasswordValid(checkPassword(val))
   }  
 
   return (
