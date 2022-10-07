@@ -1,7 +1,12 @@
 import React from 'react'
 
 const checkEmail = (val) => {
-  return (val.length > 3 && val.includes(".") && val.includes("@"))
+  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val)) {
+    // I stole this code from https://www.w3resource.com/javascript/form/email-validation.php
+    return (true)
+  } else {
+    return (false)
+  }
 }
 
 export default checkEmail
