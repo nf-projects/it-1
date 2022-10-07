@@ -132,17 +132,32 @@ export default function SignupCard() {
               </InputGroup>
             </FormControl>
             <Stack spacing={10} pt={2}>
-              <Button
+              {(firstNameValid && lastNameValid && emailValid && passwordValid) ? 
+                <Button
                 onClick={handleSubmit}
-                loadingText="Submitting"
+                loadingText="Lädt..."
                 size="lg"
                 bg={'blue.400'}
                 color={'white'}
                 _hover={{
-                  bg: 'blue.500',
+                  bg: 'blue.500', 
                 }}>
-                Anmelden 
+                Anmelden!
               </Button>
+              :
+              <Button
+              //onClick={alert("Inputs passen nicht!")}
+              loadingText="Lädt..."
+              size="lg"
+              bg={'gray.400'}
+              color={'white'}
+              _hover={{
+                bg: 'gray.500',
+              }}>
+              Inputs passen nicht.
+            </Button>
+              }
+
               {!firstNameValid ? <Text as='b' color='tomato' >Invalid First Name!</Text> : null}
               {!lastNameValid ? <Text as='b' color='tomato' >Invalid Last Name!</Text> : null}
               {!emailValid ? <Text as='b' color='tomato' >Invalid Email</Text> : null}
