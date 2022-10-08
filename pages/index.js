@@ -16,9 +16,9 @@ import {
 } from '@chakra-ui/react';
 import { useState } from 'react';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
-import checkName from '../components/authcheck/name';
-import checkEmail from '../components/authcheck/email';
-import checkPassword from '../components/authcheck/password';
+import checkName from '../util/authcheck/name';
+import checkEmail from '../util/authcheck/email';
+import checkPassword from '../util/authcheck/password';
 
 export default function SignupCard() {
   const [showPassword, setShowPassword] = useState(false); // for "toggle password"
