@@ -158,10 +158,10 @@ export default function SignupCard() {
             </Button>
               }
 
-              {!firstNameValid ? <Text as='b' color='tomato' >Vorname zu kurz!</Text> : null}
-              {!lastNameValid ? <Text as='b' color='tomato' >Nachname zu kurz!</Text> : null}
-              {!emailValid ? <Text as='b' color='tomato' >Email passt nicht!</Text> : null}
-              {!passwordValid ? <Text as='b' color='tomato' >Passwort muss eine Zahl & ein Sonderzeichen enthalten, und mindestens 8 Buchstaben lang sein!</Text> : null}
+              {!firstNameValid ? <Text color='tomato' >Vorname zu kurz!</Text> : null}
+              {!lastNameValid ? <Text color='tomato' >Nachname zu kurz!</Text> : null}
+              {!emailValid ? <Text color='tomato' >Email passt nicht!</Text> : null}
+              {!passwordValid ? <Text color='tomato' >Passwort muss eine Zahl & ein Sonderzeichen enthalten, und mindestens 8 Buchstaben lang sein!</Text> : null}
             </Stack>
           </Stack>
         </Box>
