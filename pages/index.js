@@ -57,8 +57,8 @@ export default function SignupCard() {
   }    
 
   function updatePassword (val) {
-    setPassword(val)
-    setPasswordValid(checkPassword(val))
+    setPassword(val);
+    setPasswordValid(checkPassword(val));
   }  
 
   return (
