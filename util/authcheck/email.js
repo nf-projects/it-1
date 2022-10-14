@@ -24,7 +24,6 @@ const checkEmail = (val) => {
   if(!input.includes("@")) return false
   if(input.length < 5) return false //min: a@a.a
 
-  // if no "anti requirements" are met, email is valid
   return true;
 }
 
