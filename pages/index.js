@@ -20,7 +20,10 @@ import checkName from '../util/authcheck/name';
 import checkEmail from '../util/authcheck/email';
 import checkPassword from '../util/authcheck/password';
 
+
+
 export default function SignupCard() {
+
   const [showPassword, setShowPassword] = useState(false); // for "toggle password"
 
   const [firstName, setFirstName] = useState("");
@@ -158,8 +161,8 @@ export default function SignupCard() {
             </Button>
               }
 
-              {!firstNameValid ? <Text color='tomato' >Vorname zu kurz!</Text> : null}
-              {!lastNameValid ? <Text color='tomato' >Nachname zu kurz!</Text> : null}
+              {!firstNameValid ? <Text color='tomato' >Vorname passt nicht!</Text> : null}
+              {!lastNameValid ? <Text color='tomato' >Nachname passt nicht!</Text> : null}
               {!emailValid ? <Text color='tomato' >Email passt nicht!</Text> : null}
               {!passwordValid ? <Text color='tomato' >Passwort muss eine Zahl & ein Sonderzeichen enthalten, und mindestens 8 Buchstaben lang sein!</Text> : null}
             </Stack>
