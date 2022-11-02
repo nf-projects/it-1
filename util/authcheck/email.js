@@ -17,9 +17,7 @@ const checkEmail = (val) => {
 
   // check if it ends in a tld
   let tlds = require("./tlds.json");
-  if(!endsWithAny(tlds, input)) {
-    return false
-  }
+  if(!endsWithAny(tlds, input)) return false;
 
   if(!input.includes("@")) return false
   if(input.length < 5) return false //min: a@a.a
@@ -32,6 +30,7 @@ function endsWithAny(suffixes, string) {
   for (let i = 0; i < suffixes.length; i++) {
     if (string.endsWith(suffixes[i])) return true;
   }
+  
   return false;
 }
 
