@@ -1,17 +1,5 @@
 import React from 'react'
 
-// I stole this code from https://www.w3resource.com/javascript/form/email-validation.php
-// This function is not currently used because it's "cheating"
-/*
-const checkEmailRegex = (val) => {
-  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(val)) {
-    return (true)
-  } else {
-    return (false)
-  }
-}
-*/
-
 const checkEmail = (val) => {
   let input = val.toLowerCase();
 
