@@ -8,7 +8,7 @@ const checkEmail = (val) => {
   if(!endsWithAny(tlds, input)) return false;
 
   if(!input.includes("@")) return false
-  if(input.length < 5) return false //min: a@a.a
+  if(input.length < 6) return false //min: a@a.aa
 
   return true;
 }
