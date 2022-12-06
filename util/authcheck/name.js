@@ -1,13 +1,9 @@
 import React from 'react'
 
 const checkName = (val) => {
+  var lettersWithUmlauts = /^[A-Za-zäöüÄÖÜß]+$/; // the "+$" means "one or more of the preceding character"
 
-  if(val.length < 2) return false; 
-
-  // first char must be uppercase
-  if(val[0] == val[0].toLowerCase()) return false; 
-
-  return true;
+  return (val.match(lettersWithUmlauts) && val.length >= 2) // also at least 2 characters long
 }
 
 export default checkName
